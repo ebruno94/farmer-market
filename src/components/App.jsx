@@ -1,6 +1,8 @@
 import React from 'react';
+import Header from './Header';
 import ScheduleList from './ScheduleList';
 import SeasonalProduceList from './SeasonalProduceList';
+import {Switch, Route} from 'react-router-dom';
 
 
 function App(){
@@ -28,28 +30,13 @@ function App(){
             padding-bottom: 10px;
           }
 
-          .subtitle{
-            background-color: crimson;
-            text-align: center;
-            text-shadow: 0px 0px 15px white;
-            box-shadow: 0px 0px 25px black;
-            border: 2px dotted white;
-            height: 75px;
-            width: 400px;
-            padding-top: 30px;
-            margin-left: auto;
-            margin-right: auto;
-          }
-
 
       `}</style>
-      <h1 className="title">Farmer's Market Schedule</h1>
-      <hr/>
-      <h1 className="subtitle">SCHEDULE</h1>
-      <ScheduleList/>
-      <hr/>
-      <h1 className="subtitle">SEASONAL PRODUCE LIST!</h1>
-      <SeasonalProduceList/>
+      <Header/>
+      <Switch>
+        <Route exact path='/' component={ScheduleList}/>
+        <Route path='/produce-list' component={SeasonalProduceList}/>
+      </Switch>
     </div>
   );
 }

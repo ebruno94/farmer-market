@@ -279,7 +279,22 @@ function SeasonalProduceList(){
             flex-wrap: wrap;
             justify-content: center;
           }
+
+          .subtitle{
+            background-color: crimson;
+            text-align: center;
+            text-shadow: 0px 0px 15px white;
+            box-shadow: 0px 0px 25px black;
+            border: 2px dotted white;
+            height: 75px;
+            width: 400px;
+            padding-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+          }
       `}</style>
+      <h1 className="subtitle">SEASONAL PRODUCE</h1>
+      <hr/>
       <div className="container">
         {availableProduce.map((set, index)=>
           <SeasonalProduce

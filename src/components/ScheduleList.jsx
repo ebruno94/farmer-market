@@ -1,6 +1,6 @@
 import React from 'react';
 import Schedule from './Schedule';
-
+import {veggies} from '../assets/images/veggies.png';
 
 const marketSchedule = [
   {
@@ -40,11 +40,24 @@ const marketSchedule = [
     booth: '9G'
   }
 ];
-
 function ScheduleList(){
   return (
     <div>
-
+      <style jsx>{`
+        .subtitle{
+          background-color: crimson;
+          text-align: center;
+          text-shadow: 0px 0px 15px white;
+          box-shadow: 0px 0px 25px black;
+          border: 2px dotted white;
+          height: 75px;
+          width: 400px;
+          padding-top: 30px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      `}</style>
+      <h1 className="subtitle">SCHEDULE</h1>
       {marketSchedule.map((schedule, index)=>
         <Schedule
           location= {schedule.location}
@@ -53,6 +66,7 @@ function ScheduleList(){
           hours= {schedule.hours}
           key={index} />
       )}
+      <img src={veggies}/>
     </div>
   );
 }

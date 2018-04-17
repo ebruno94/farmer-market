@@ -35,7 +35,9 @@ function SeasonalProduce(props){
         color: black;
       }
 
+
     `}</style>
+
       <div className="container">
         <div className="box">
           <h1>{props.month}</h1>
